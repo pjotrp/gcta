@@ -27,7 +27,6 @@
 #include "zfstream.h"
 #include <Eigen/Dense>
 #include <Eigen/Sparse>
-#include <unsupported/Eigen/SparseExtra>
 
 using namespace Eigen;
 using namespace std;
