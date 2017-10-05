@@ -45,11 +45,18 @@ You will need to specify the path of library EIGEN in the Makefile
 
 # EXAMPLE
 
-## Simulate a QTL
+## Simulate phenotypes from existing genotype
 
 The following command generates 10 phenotypes from existing plink genotypes
 
     ./gcta64 --bfile example/HLC --simu-qt --simu-hsq 0.5 --simu-causal-loci example/HLC.causal --simu-rep 10 --out HLC
+
+where HLC.causal contains
+
+    rs6688000 0.122
+    rs10746502 0.50
+    rs1542899 0.72
+    rs12404358 -0.35
 
 # LICENSE
 
