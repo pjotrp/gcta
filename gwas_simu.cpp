@@ -20,7 +20,7 @@ int gcta::read_QTL_file(string qtl_file, vector<string> &qtl_name, vector<int> &
     have_eff.clear();
 
     ifstream i_qtl(qtl_file.c_str());
-    if(!i_qtl) throw("Error: can not open QTL file ["+qtl_file+"] to read.");
+    if(!i_qtl) throw("Error: can not open QTL file ["+qtl_file+"] to read (--simu-causal-loci).");
     string qtl_buf, str_buf;
     double qtl_eff_buf=0.0;
 	cout<<"Reading a list of SNPs (as causal variants) from ["+qtl_file+"]."<<endl;

@@ -1,5 +1,7 @@
 # GCTA Genome-wide Complex Trait Analysis
 
+This is a rescued version of GCTA 0.93.9 as published in
+
 By Yang J, Lee SH, Goddard ME, Visscher PM. Genome-wide complex trait analysis (GCTA): methods, data analyses, and interpretations. Methods Mol Biol. 2013;1019:215-36. doi: [10.1007/978-1-62703-447-0_9](https://doi.org/10.1007/978-1-62703-447-0_9).
 
 See also [wikipedia](https://en.wikipedia.org/wiki/Genome-wide_complex_trait_analysis)
@@ -25,6 +27,10 @@ AUTHOR: Jian Yang, Hong Lee, Mike Goddard and Peter Visscher
 
 CONTACT: jian.yang@uq.edu.au
 
+NOTE: A newer version of gcta is being developed at
+http://cnsgenomics.com/software/gcta/#Download. It uses the non-free
+Intel MKL.
+
 # INSTALL
 
 Dependencies:
@@ -35,7 +41,15 @@ Dependencies:
 You will need to specify the path of library EIGEN in the Makefile
 (keyword EigenLib). Example
 
-      make -f Makefile
+    make -f Makefile
+
+# EXAMPLE
+
+## Simulate a QTL
+
+The following command generates 10 phenotypes from existing plink genotypes
+
+    ./gcta64 --bfile example/HLC --simu-qt --simu-hsq 0.5 --simu-causal-loci example/HLC.causal --simu-rep 10 --out HLC
 
 # LICENSE
 
@@ -43,4 +57,5 @@ Released under GNU General Public License, v2 (see LICENSE)
 
 # DOCUMENTATION
 
-?
+[PDF](doc/GCTA_UserManual_v1.24.pdf) and (for the new software)
+http://cnsgenomics.com/software/gcta/#Overview
